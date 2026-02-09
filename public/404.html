@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>404 — Page Not Found</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0a0a0c;
+      color: #e8e6e3;
+      font-family: 'Avenir Next', 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    .error {
+      max-width: 400px;
+    }
+    .error__code {
+      font-size: 5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #c9a87c;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .error__message {
+      font-size: 1.125rem;
+      color: #9a9590;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .error__link {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      border: 1px solid #2a2a2f;
+      border-radius: 10px;
+      color: #c9a87c;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.04em;
+      transition: border-color 250ms ease, background-color 250ms ease;
+    }
+    .error__link:hover {
+      border-color: #c9a87c;
+      background-color: rgba(201, 168, 124, 0.08);
+    }
+  </style>
+</head>
+<body>
+  <div class="error">
+    <div class="error__code">404</div>
+    <p class="error__message">This page doesn't exist. It may have been moved or removed.</p>
+    <a href="/" class="error__link">Back to Home</a>
+  </div>
+</body>
+</html>
