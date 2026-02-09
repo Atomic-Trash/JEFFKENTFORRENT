@@ -1,0 +1,131 @@
+/* Logo monogram */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-surface);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-lg);
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-slow),
+    border-color var(--transition-normal),
+    background var(--transition-normal);
+  cursor: default;
+}
+
+.logo:hover {
+  transform: scale(1.08);
+  border-color: transparent;
+  background:
+    linear-gradient(var(--color-bg-surface), var(--color-bg-surface)) padding-box,
+    conic-gradient(
+      from var(--border-angle),
+      var(--prism-red), var(--prism-orange), var(--prism-gold),
+      var(--prism-green), var(--prism-cyan), var(--prism-blue),
+      var(--prism-violet), var(--prism-red)
+    ) border-box;
+  box-shadow:
+    0 0 12px rgba(118, 75, 162, 0.3),
+    0 0 24px rgba(78, 205, 196, 0.15),
+    0 0 40px rgba(201, 168, 124, 0.1);
+  animation: border-rotate 4s linear infinite;
+}
+
+/* Card stack */
+.card-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* Link card — glassmorphism, centered */
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 72px;
+  padding: var(--space-lg) var(--space-xl);
+  background: var(--color-bg-surface-glass);
+  border: 1px solid var(--color-glass-edge);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  -webkit-tap-highlight-color: rgba(201, 168, 124, 0.1);
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal),
+    box-shadow var(--transition-slow),
+    transform var(--transition-fast);
+  cursor: pointer;
+}
+
+/* Prismatic border on hover — gradient border trick */
+.card:hover,
+.card:focus-visible {
+  border-color: transparent;
+  background:
+    linear-gradient(var(--color-bg-elevated), var(--color-bg-elevated)) padding-box,
+    conic-gradient(
+      from var(--border-angle),
+      var(--prism-red), var(--prism-orange), var(--prism-gold),
+      var(--prism-green), var(--prism-cyan), var(--prism-blue),
+      var(--prism-violet), var(--prism-red)
+    ) border-box;
+  box-shadow:
+    0 0 20px rgba(118, 75, 162, 0.12),
+    0 0 40px rgba(78, 205, 196, 0.06),
+    0 4px 24px rgba(0, 0, 0, 0.4);
+  animation: border-rotate 4s linear infinite;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.card:active {
+  transform: scale(0.98);
+  transition: transform 100ms ease;
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not (backdrop-filter: blur(12px)) {
+  .card {
+    background: var(--color-bg-surface);
+  }
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.card__title {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  transition: color var(--transition-normal);
+}
+
+.card:hover .card__title {
+  color: var(--color-accent);
+}
+
+.card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
