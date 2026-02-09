@@ -11,7 +11,7 @@
   color: var(--color-accent);
   font-family: var(--font-mono);
   font-size: var(--text-sm);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.05em;
   margin-bottom: var(--space-lg);
   transition:
@@ -115,7 +115,7 @@
 
 .card__title {
   font-size: var(--text-base);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-text-primary);
   transition: color var(--transition-normal);
 }
