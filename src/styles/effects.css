@@ -17,33 +17,43 @@
 }
 
 .page .orb--violet {
-  width: 600px;
-  height: 600px;
+  width: 680px;
+  height: 680px;
   top: -10%;
   left: -15%;
-  background: radial-gradient(circle, rgba(118, 75, 162, 0.32) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(118, 75, 162, 0.42) 0%, transparent 70%);
   filter: blur(100px);
   animation: drift-1 65s ease-in-out infinite alternate;
 }
 
 .page .orb--cyan {
-  width: 500px;
-  height: 500px;
+  width: 560px;
+  height: 560px;
   top: 40%;
   right: -20%;
-  background: radial-gradient(circle, rgba(78, 205, 196, 0.28) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(78, 205, 196, 0.36) 0%, transparent 70%);
   filter: blur(90px);
   animation: drift-2 55s ease-in-out infinite alternate;
 }
 
 .page .orb--amber {
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
   bottom: -5%;
   left: 20%;
-  background: radial-gradient(circle, rgba(201, 168, 124, 0.25) 0%, transparent 70%);
-  filter: blur(110px);
+  background: radial-gradient(circle, rgba(201, 168, 124, 0.32) 0%, transparent 70%);
+  filter: blur(100px);
   animation: drift-3 70s ease-in-out infinite alternate;
+}
+
+.page .orb--rose {
+  width: 420px;
+  height: 420px;
+  top: 60%;
+  left: -10%;
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.22) 0%, transparent 70%);
+  filter: blur(105px);
+  animation: drift-4 60s ease-in-out infinite alternate;
 }
 
 @keyframes drift-1 {
@@ -67,6 +77,13 @@
   100% { transform: translate(40px, 60px) scale(1.02); }
 }
 
+@keyframes drift-4 {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(70px, -40px) scale(1.07); }
+  66% { transform: translate(-50px, -70px) scale(0.94); }
+  100% { transform: translate(30px, 50px) scale(1.04); }
+}
+
 /* ==========================================================
    Mouse-Follow Lens Glow
    Soft radial light that tracks the cursor
@@ -81,9 +98,10 @@
   pointer-events: none;
   z-index: -1;
   background: radial-gradient(
-    600px circle at var(--mouse-x) var(--mouse-y),
-    rgba(201, 168, 124, 0.06) 0%,
-    rgba(102, 126, 234, 0.03) 30%,
+    700px circle at var(--mouse-x) var(--mouse-y),
+    rgba(201, 168, 124, 0.10) 0%,
+    rgba(118, 75, 162, 0.06) 25%,
+    rgba(102, 126, 234, 0.04) 45%,
     transparent 70%
   );
   transition: opacity 0.3s ease;

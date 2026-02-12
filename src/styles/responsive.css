@@ -32,7 +32,7 @@
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
     background: var(--color-bg-surface);
-    border: 1px solid rgba(118, 75, 162, 0.15);
+    border: 1px solid rgba(118, 75, 162, 0.22);
   }
 
   .card-stack {
@@ -42,12 +42,13 @@
   /* Simplify orbs on mobile — static, reduced opacity */
   .page .orb {
     animation: none;
-    opacity: 0.5;
+    opacity: 0.6;
   }
 
   .page .orb--violet { width: 300px; height: 300px; }
   .page .orb--cyan { width: 250px; height: 250px; }
   .page .orb--amber { width: 200px; height: 200px; }
+  .page .orb--rose { width: 200px; height: 200px; }
 
   /* Hide lens glow on touch devices */
   .page .lens-glow { display: none; }

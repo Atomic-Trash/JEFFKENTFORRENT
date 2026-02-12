@@ -67,8 +67,8 @@
   background:
     linear-gradient(var(--color-bg-surface-glass), var(--color-bg-surface-glass)) padding-box,
     linear-gradient(135deg,
-      rgba(118, 75, 162, 0.2), rgba(78, 205, 196, 0.15),
-      rgba(201, 168, 124, 0.15), rgba(102, 126, 234, 0.2)
+      rgba(118, 75, 162, 0.32), rgba(78, 205, 196, 0.22),
+      rgba(201, 168, 124, 0.22), rgba(102, 126, 234, 0.32)
     ) border-box;
   border-radius: var(--radius-md);
   -webkit-backdrop-filter: blur(12px);
@@ -79,6 +79,7 @@
     border-color var(--transition-normal),
     box-shadow var(--transition-slow),
     transform var(--transition-fast);
+  box-shadow: 0 0 16px rgba(118, 75, 162, 0.06), 0 0 32px rgba(78, 205, 196, 0.03);
   cursor: pointer;
 }
 
