@@ -46,6 +46,7 @@
 }
 
 .header__name {
+  font-family: var(--font-display);
   font-size: var(--text-3xl);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -109,6 +110,7 @@
 }
 
 .section__label {
+  font-family: var(--font-display);
   font-size: var(--text-sm);
   font-weight: 600;
   text-transform: uppercase;

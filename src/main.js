@@ -1,3 +1,8 @@
+import '@fontsource-variable/sora'
+import '@fontsource/dm-sans/400.css'
+import '@fontsource/dm-sans/500.css'
+import '@fontsource/dm-sans/600.css'
+
 import './styles/reset.css'
 import './styles/variables.css'
 import './styles/base.css'
