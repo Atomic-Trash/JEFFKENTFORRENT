@@ -1,7 +1,6 @@
 export function initAnimations() {
   initReveal()
   initLensGlow()
-  initCardTilt()
   initOrbParallax()
 }
 
@@ -76,48 +75,6 @@ function initLensGlow() {
       document.documentElement.style.setProperty('--mouse-x', e.clientX + 'px')
       document.documentElement.style.setProperty('--mouse-y', e.clientY + 'px')
       rafId = null
-    })
-  })
-}
-
-/* ==========================================================
-   Card Tilt — 3D perspective follows cursor
-   ========================================================== */
-
-function initCardTilt() {
-  if (!window.matchMedia('(hover: hover)').matches) return
-
-  const cards = document.querySelectorAll('.card')
-  const MAX_TILT = 3 // degrees
-
-  cards.forEach((card) => {
-    let rafId = null
-
-    card.addEventListener('mousemove', (e) => {
-      if (rafId) return
-
-      rafId = requestAnimationFrame(() => {
-        const rect = card.getBoundingClientRect()
-        const x = (e.clientX - rect.left) / rect.width
-        const y = (e.clientY - rect.top) / rect.height
-
-        // Center around 0: -1 to 1
-        const tiltX = (0.5 - y) * MAX_TILT * 2
-        const tiltY = (x - 0.5) * MAX_TILT * 2
-
-        card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`
-        rafId = null
-      })
-    })
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
-      card.style.transform = 'rotateX(0deg) rotateY(0deg)'
-
-      // Reset transition after settle so mousemove feels responsive
-      setTimeout(() => {
-        card.style.transition = ''
-      }, 400)
     })
   })
 }

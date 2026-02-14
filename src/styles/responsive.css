@@ -42,16 +42,6 @@
     overflow: visible;
   }
 
-  /* Disable light sweep on mobile */
-  .card::before {
-    display: none;
-  }
-
-  /* Disable 3D tilt perspective on mobile */
-  .card-stack {
-    perspective: none;
-  }
-
   .card-stack {
     gap: 4px;
   }
@@ -121,11 +111,6 @@
   .card:hover,
   .card:focus-visible {
     animation: none;
-  }
-
-  /* Disable light sweep */
-  .card::before {
-    display: none;
   }
 
   .logo:hover {
