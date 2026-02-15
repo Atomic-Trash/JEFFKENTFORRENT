@@ -57,9 +57,6 @@
   .page .orb--amber { width: 200px; height: 200px; }
   .page .orb--rose { width: 200px; height: 200px; }
 
-  /* Hide lens glow on touch devices */
-  .page .lens-glow { display: none; }
-
   /* Hide film grain on mobile */
   .page::after { display: none; }
 }
@@ -76,10 +73,6 @@
 
   .page .orb {
     animation: none;
-  }
-
-  .page .lens-glow {
-    display: none;
   }
 
   /* Disable film grain */

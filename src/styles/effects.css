@@ -85,34 +85,6 @@
 }
 
 /* ==========================================================
-   Mouse-Follow Lens Glow
-   Soft radial light that tracks the cursor
-   ========================================================== */
-
-.page .lens-glow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-  background: radial-gradient(
-    700px circle at var(--mouse-x) var(--mouse-y),
-    rgba(201, 168, 124, 0.10) 0%,
-    rgba(58, 90, 156, 0.06) 25%,
-    rgba(102, 126, 234, 0.04) 45%,
-    transparent 70%
-  );
-  transition: opacity 0.3s ease;
-  opacity: 0;
-}
-
-.page .lens-glow--active {
-  opacity: 1;
-}
-
-/* ==========================================================
    Prismatic border rotation animation
    ========================================================== */
 

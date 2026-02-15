@@ -70,8 +70,4 @@
 
   /* Layout */
   --max-width: 640px;
-
-  /* Mouse position (updated by JS) */
-  --mouse-x: 50%;
-  --mouse-y: 50%;
 }

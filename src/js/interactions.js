@@ -1,6 +1,5 @@
 export function initAnimations() {
   initReveal()
-  initLensGlow()
   initOrbParallax()
 }
 
@@ -45,38 +44,6 @@ function initReveal() {
   )
 
   allRevealable.forEach((el) => observer.observe(el))
-}
-
-/* ==========================================================
-   Lens Glow — mouse-follow radial light
-   ========================================================== */
-
-function initLensGlow() {
-  if (!window.matchMedia('(hover: hover)').matches) return
-
-  const page = document.querySelector('.page')
-  const glow = document.querySelector('.lens-glow')
-  if (!page || !glow) return
-
-  let rafId = null
-
-  page.addEventListener('mouseenter', () => {
-    glow.classList.add('lens-glow--active')
-  })
-
-  page.addEventListener('mouseleave', () => {
-    glow.classList.remove('lens-glow--active')
-  })
-
-  page.addEventListener('mousemove', (e) => {
-    if (rafId) return
-
-    rafId = requestAnimationFrame(() => {
-      document.documentElement.style.setProperty('--mouse-x', e.clientX + 'px')
-      document.documentElement.style.setProperty('--mouse-y', e.clientY + 'px')
-      rafId = null
-    })
-  })
 }
 
 /* ==========================================================
