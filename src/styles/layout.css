@@ -52,7 +52,25 @@
   letter-spacing: -0.02em;
   color: var(--color-text-primary);
   margin-bottom: var(--space-xs);
-  animation: chromatic-pulse 8s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+}
+
+.header__name .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  animation: 
+    char-entrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+    chromatic-pulse 8s ease-in-out infinite;
+  animation-delay: calc(var(--char-index) * 0.04s), calc(var(--char-index) * -0.2s);
+}
+
+@keyframes char-entrance {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 @keyframes chromatic-pulse {
