@@ -1,5 +1,19 @@
+# Dependencies
 node_modules
+
+# Build output
 dist
+
+# Hosting
 .netlify
+
+# Local/env files
 *.local
+
+# OS files
 .DS_Store
+
+# Tool configs & debug artifacts
+.claude/
+.playwright-mcp/
+*.png
