@@ -94,7 +94,11 @@
   .card-stack[data-bento="true"] {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
+  .card-stack[data-bento="3"] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .card-stack[data-bento="true"] .card--featured {
     grid-column: span 2;
   }

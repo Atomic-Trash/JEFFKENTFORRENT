@@ -81,7 +81,8 @@
   }
 
   /* Show reveals immediately without animation */
-  .reveal {
+  .reveal,
+  .js-loaded .reveal:not(.reveal--visible) {
     opacity: 1;
     filter: none;
     transform: none;

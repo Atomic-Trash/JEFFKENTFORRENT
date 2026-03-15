@@ -1,4 +1,5 @@
 export function initAnimations() {
+  document.documentElement.classList.add('js-loaded')
   initReveal()
   initOrbParallax()
   initCardsInteractive()

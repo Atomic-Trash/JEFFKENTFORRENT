@@ -115,25 +115,58 @@
 }
 
 /* ==========================================================
+   Skip-to-Content Link
+   ========================================================== */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1D1D1F;
+  color: #F5F5F7;
+  padding: 8px 16px;
+  border-radius: 4px;
+  z-index: 10000;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* ==========================================================
    Reveal Entrance Animations
    Blur-to-sharp + scale + translate cascade
+
+   Progressive enhancement: content is visible by default.
+   JS adds .js-loaded to <html>, which hides elements so they
+   can animate in. If JS fails, everything remains visible.
    ========================================================== */
 
 .reveal {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0) scale(1);
+}
+
+.js-loaded .reveal:not(.reveal--visible) {
   opacity: 0;
   filter: blur(4px);
   transform: translateY(18px) scale(0.97);
   will-change: opacity, filter, transform;
-  transition:
-    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal--visible {
   opacity: 1;
   filter: blur(0);
   transform: translateY(0) scale(1);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ==========================================================
